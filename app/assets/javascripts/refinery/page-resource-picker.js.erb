@@ -109,7 +109,9 @@ var resource_added; // Global callback
     current_list_item.find('input:hidden:first').val(resource_id);
 
     current_list_item.append(resource.html);
+    current_list_item.attr('data-url', resource.href);
     current_list_item.attr('id', 'resource_' + resource_id).removeClass('empty');
+    current_list_item.attr('data-id', resource_id);
 
     current_list_item.appendTo($('#page_resources'));
     reset_functionality();
